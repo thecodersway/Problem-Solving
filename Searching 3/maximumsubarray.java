@@ -33,7 +33,7 @@ class maximumsubarray
         int mid=start+(end-start)/2;
         if(blackbox(ar,mid,k))
         {
-           ans=Math.max(ans,mid);
+           ans=mid;
            start=mid+1; 
         }
         else
