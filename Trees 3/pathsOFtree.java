@@ -1,5 +1,5 @@
 import java.util.*;
-
+//https://leetcode.com/problems/binary-tree-paths/description/
 public class pathsOFtree {
     public class TreeNode {
         int val;
@@ -20,15 +20,15 @@ public class pathsOFtree {
     }
 
     public void traverse(TreeNode root, StringBuilder path) {
-        if (root.left == null && root.right == null) { // reached a leaf
+        if (root.left == null && root.right == null) {
             path = path.append(root.val);
             paths.add(path.toString());
         } else {
-            if (root.left != null) { // explore left node if exist
+            if (root.left != null) { 
                 StringBuilder subPath = new StringBuilder(path);
                 traverse(root.left, subPath.append(root.val + "->"));
             }
-            if (root.right != null) { // explore right node if exist
+            if (root.right != null) {
                 StringBuilder subPath = new StringBuilder(path);
                 traverse(root.right, subPath.append(root.val + "->"));
             }
